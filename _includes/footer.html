@@ -1,0 +1,70 @@
+<!-- Wrapper -->
+<div class="wrapper">
+    <div class="inner">
+        
+        {% if page.show_contact %}
+            {% include contact.html %}
+        {% endif %}
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="links">
+                {% if site.footer.links_col1 %}
+                    <div>
+                        <h3>{{ site.footer.links_col1.title }}</h3>
+                        <ul class="plain">
+                            {% for item in site.footer.links_col1.links %}
+                                <li><a href="{{ item.link | link | relative_url }}">{{ item.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if site.footer.links_col2 %}
+                    <div>
+                        <h3>{{ site.footer.links_col2.title }}</h3>
+                        <ul class="plain">
+                            {% for item in site.footer.links_col2.links %}
+                                <li><a href="{{ item.link | link | relative_url }}">{{ item.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if site.footer.links_col3 %}
+                    <div>
+                        <h3>{{ site.footer.links_col3.title }}</h3>
+                        <ul class="plain">
+                            {% for item in site.footer.links_col3.links %}
+                                <li><a href="{{ item.link | link | relative_url }}">{{ item.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if site.footer.links_col4 %}
+                    <div>
+                        <h3>{{ site.footer.links_col4.title }}</h3>
+                        <ul class="plain">
+                            {% for item in site.footer.links_col4.links %}
+                                <li><a href="{{ item.link | link | relative_url }}">{{ item.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </section>
+            {% if site.footer.social_links %}
+                <ul class="contact-icons">
+                    {% for item in site.footer.social_links %}
+                        {% if item.link %}
+                            <li class="icon {{ item.icon }}"><a href="{{ item.link }}">{{ item.text }}</a></li>
+                        {% else %}
+                            <li class="icon {{ item.icon }}">{{ item.text }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if site.footer.copyright %}
+                <p class="copyright">{{ site.footer.copyright }}</p>
+            {% endif %}
+        </footer>
+
+    </div>
+</div>

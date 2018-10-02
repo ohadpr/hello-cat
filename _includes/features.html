@@ -1,0 +1,16 @@
+<!-- Section -->
+<section class="main">
+    <header class="major">
+        <h2>{{ section.title }}</h2>
+        <p>{{ section.subtitle }}</p>
+    </header>
+    <div class="features">
+        {% for feature in section.features %}
+            <section>
+                <span class="icon {{ feature.icon }} major {{ feature.icon_accent_color }}"></span>
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.subtitle }}</p>
+            </section>
+        {% endfor %}
+    </div>
+</section>

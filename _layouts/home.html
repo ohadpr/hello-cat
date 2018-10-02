@@ -1,0 +1,13 @@
+---
+layout: body
+---
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <div class="inner">
+            {% for section in page.sections %}
+                
+                {% include {{ section.component }} %}
+            {% endfor %}
+        </div>
+    </div>

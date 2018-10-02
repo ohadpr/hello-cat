@@ -1,0 +1,84 @@
+title: Altitude
+baseurl: /
+menu:
+  buttons:
+    - text: Sign Up
+      link: generic.md
+      primary: true
+    - text: Log In
+      link: generic.md
+footer:
+  contact:
+    title: Get notified
+    subtitle: Lorem ipsum dolor sit amet nullam feugiat tempus
+  links_col1:
+    title: Magna
+    links:
+      - text: Aliquam tempus
+        link: generic.md
+      - text: Ultrecies nul
+        link: generic.md
+      - text: Gravida ultricies
+        link: generic.md
+      - text: Commodo etiam
+        link: generic.md
+  links_col2:
+    title: Feugiat
+    links:
+      - text: Morbi sem lorem
+        link: generic.md
+      - text: Praes sed dapi
+        link: generic.md
+      - text: Sed adipis nullam
+        link: generic.md
+      - text: Fus dolor lacinia
+        link: generic.md
+  links_col3:
+    title: Tempus
+    links:
+      - text: Donecnec etiam
+        link: generic.md
+      - text: Aapibus sedun
+        link: generic.md
+      - text: Namnulla tempus
+        link: generic.md
+      - text: Morbi set amet
+        link: generic.md
+  links_col4:
+    title: Aliquam
+    links:
+      - text: Lorem prasent dia
+        link: generic.md
+      - text: Nellentes ipsum
+        link: generic.md
+      - text: Diamsed arcu dolor
+        link: generic.md
+      - text: Sit amet cursus
+        link: generic.md
+  social_links:
+    - text: '1234 Fictional Street #5432 Nashville, TN 00000-0000'
+      icon: fa-home
+    - text: (000) 000-0000
+      icon: fa-phone
+      link: '#'
+    - text: info@untitled.tld
+      icon: fa-envelope-o
+      link: '#'
+  copyright: '&copy; Altitude. All rights reserved.'
+sass:
+  palette: cyan
+  palettes:
+    cyan:
+      accent2: '#4cabb1'
+      accent3: '#69c7ad'
+      accent4: '#fed586'
+    purple:
+      accent2: '#656dba'
+      accent3: '#7183cd'
+      accent4: '#eb8585'
+  indentWidth: 4
+  style: nested
+  precision: 10
+plugins:
+  - jekyll-menus
+permalink: '/posts/:slug:output_ext'

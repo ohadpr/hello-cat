@@ -1,0 +1,23 @@
+<!-- Banner -->
+<section id="banner">
+    <div class="items">
+        {% for item in page.banner.items %}
+            <section class="{{ item.accent_color }}">
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.subtitle }}</p>
+                {% if item.button %}
+                    <ul class="actions special">
+                        <li><a href="{{ item.button.link | link | relative_url }}" class="button{% if item.button.is_primary %} primary{% endif %}">{{ item.button.text }}</a></li>
+                    </ul>
+                {% endif %}
+            </section>
+        {% endfor %}
+    </div>
+    <div class="slider">
+        {% for slide in page.banner.slider %}
+            <article>
+                <img src="{{ slide.img_path | relative_url }}" alt="" data-position="{{ slide.data_position }}" />
+            </article>
+        {% endfor %}
+    </div>
+</section>

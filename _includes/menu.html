@@ -1,0 +1,16 @@
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="{{ site.baseurl }}">Home</a></li>
+        {% for item in site.menus.main %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% if site.menu.buttons %}
+        <ul class="actions stacked">
+            {% for button in site.menu.buttons %}
+                <li><a href="{{ button.link | relative_url }}" class="button{% if button.primary %} primary{% endif %} fit">{{ button.text }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

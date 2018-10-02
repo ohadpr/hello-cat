@@ -1,0 +1,158 @@
+---
+---
+
+// Misc.
+$misc: (
+    z-index-base:				10000
+);
+
+// Duration.
+$duration: (
+    menu:						0.5s,
+    transition:					0.2s,
+    slider:						1.5s
+);
+
+// Size.
+$size: (
+    border-radius:				4px,
+    border-width:				1px,
+    element-height:				2.75em,
+    element-margin:				2em
+);
+
+// Font.
+$font: (
+    family:						('Raleway', sans-serif),
+    family-fixed:				('Courier New', monospace),
+    weight:						300,
+    weight-bold:				500,
+    weight-extrabold:			600,
+    letter-spacing-heading:		0.1em
+);
+
+// Palette.
+{% assign palette = site.sass.palettes[site.sass.palette] %}
+$palette: (
+    bg:							#ffffff,
+    fg:							rgba(67,75,86,0.75),
+    fg-bold:					#434b56,
+    fg-light:					rgba(67,75,86,0.5),
+    border:						rgba(67,75,86,0.25),
+    border-bg:					rgba(67,75,86,0.05),
+    border-bg-alt:				rgba(67,75,86,0.1),
+
+    shadow:						rgba(0,0,0,0.1),
+
+    accent1: (
+        bg:						#575b72,
+        fg:						rgba(255,255,255,0.75),
+        fg-bold:				#ffffff,
+        fg-light:				rgba(255,255,255,0.5),
+        border:					rgba(255,255,255,0.25),
+        border-bg:				rgba(255,255,255,0.05),
+        border-bg-alt:			rgba(255,255,255,0.1)
+    ),
+
+    accent2: (
+        bg:						{{ palette.accent2 }},
+        fg:						rgba(255,255,255,0.75),
+        fg-bold:				#ffffff,
+        fg-light:				rgba(255,255,255,0.5),
+        border:					rgba(255,255,255,0.25),
+        border-bg:				rgba(255,255,255,0.05),
+        border-bg-alt:			rgba(255,255,255,0.1)
+    ),
+
+    accent3: (
+        bg:						{{ palette.accent3 }},
+        fg:						rgba(255,255,255,0.75),
+        fg-bold:				#ffffff,
+        fg-light:				rgba(255,255,255,0.5),
+        border:					rgba(255,255,255,0.25),
+        border-bg:				rgba(255,255,255,0.05),
+        border-bg-alt:			rgba(255,255,255,0.1)
+    ),
+
+    accent4: (
+        bg:						{{ palette.accent4 }},
+        fg:						rgba(255,255,255,0.75),
+        fg-bold:				#ffffff,
+        fg-light:				rgba(255,255,255,0.5),
+        border:					rgba(255,255,255,0.25),
+        border-bg:				rgba(255,255,255,0.05),
+        border-bg-alt:			rgba(255,255,255,0.1)
+    )
+
+);
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,600');
+
+/*
+	Altitude by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
+	));
+
+// Mixins.
+
+	@mixin color($p) {
+		@include color-typography($p);
+		@include color-box($p);
+		@include color-button($p);
+		@include color-features($p);
+		@include color-form($p);
+		@include color-icon($p);
+		@include color-list($p);
+		@include color-section($p);
+		@include color-table($p);
+	}
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	@import 'components/features';
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/contact-icons';
+	@import 'components/section';
+	@import 'components/table';
+	@import 'components/carousel';
+	@import 'components/spotlight';
+	@import 'components/wrapper';
+
+// Layout.
+
+	@import 'layout/header';
+	@import 'layout/menu';
+	@import 'layout/banner';
+	@import 'layout/footer';
+	@import 'layout/page-wrapper';
